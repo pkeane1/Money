@@ -1,13 +1,17 @@
 console.log("hi")
 
-$("#button").click(function(){
+$("#bball").click(function(){
     $.ajax({
       type: 'GET',
-      url:'/api/example',
+      url:'/api/bball',
       success: function(data){
         console.log('success:',data)
+        let sports = data;
+        for(let i =0; i<sports.length;i++){
+          console.log(i)
+        }
       }     
     });
 
 });
-    
+  

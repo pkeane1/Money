@@ -8,7 +8,12 @@ $("#bball").click(function(){
         console.log('success:',data)
         let sports = data;
         for(let i =0; i<sports.length;i++){
-          console.log(i)
+          let newElement = document.createElement('div')
+          newElement.className = "sportsDiv"
+          console.log(sports[i].teams)
+          newElement.innerHTML = sports[i].teams
+          $('#lines').append(newElement)
+          
         }
       }     
     });

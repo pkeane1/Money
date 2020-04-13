@@ -3,9 +3,11 @@ const axios = require('axios')
 
 
 module.exports = function(app) {
-
+//BASKETBALL
 app.get("/api/bball",function(request,res) {
+
     const api_key = process.env.API_KEY
+
     axios.get('https://api.the-odds-api.com/v3/sports', {
     params: {
         api_key:  api_key 
@@ -31,7 +33,7 @@ axios.get('https://api.the-odds-api.com/v3/odds', {
         api_key:  api_key ,
         sport:  'basketball_ncaab',
         region: 'us', // uk | us | au
-        mkt: 'h2h' // h2h | spreads | totals
+        mkt: 'totals' // h2h | spreads | totals
     }
 }).then(response => {
     // odds_json['data'] contains a list of live and 
